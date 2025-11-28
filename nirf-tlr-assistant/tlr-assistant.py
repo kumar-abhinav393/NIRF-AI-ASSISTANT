@@ -1,7 +1,13 @@
 import os
+import time
+import threading
 import tkinter as tk
 from tkinter import ttk, messagebox
 import google.generativeai as genai
+from helpers.build_prompt import build_prompt
+from helpers.spinner import (start_spinner, stop_spinner)
+from helpers.ansi_color_codes import (COLOR_ERROR, COLOR_HEADER, COLOR_INFO,
+    COLOR_OK, COLOR_RESET, COLOR_WARNING)
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 if GEMINI_API_KEY:
@@ -79,89 +85,6 @@ def collect_input_values(entries):
         "target_score": target_tlr_score,
     }
 
-def build_prompt(values: dict) -> str:
-    """
-    Build a natural language prompt for Perplexity
-    using the cleaned numeric values.
-    """
-    total_students = values["total_students"]
-    total_faculty = values["total_faculty"]
-    phd_faculty = values["phd_faculty"]
-    phd_students = values["phd_students"]
-    annual_expenditure = values["annual_expenditure"]
-    occupancy = values["occupancy"]
-    target_score = values["target_score"]
-
-    prompt = f"""
-You are an expert in NIRF ranking (India). 
-Analyze the institute data and provide the TLR breakdown in a strictly structured, easy-to-read format.
-
-Institute Data:
-- Total students: {total_students}
-- Total faculty: {total_faculty}
-- PhD faculty: {phd_faculty}
-- PhD students: {phd_students}
-- Annual expenditure: ₹{annual_expenditure} crore
-- Seat occupancy: {occupancy}%
-- Target TLR Score: {target_score}
-
-Return your answer ONLY in the following format:
-
-==============================
-📌 TLR COMPONENT SCORES (Indexed)
-==============================
-1. SS (Student Strength): <score>/20  
-2. FSR (Faculty-Student Ratio): <score>/30  
-3. FQE (Faculty Qualifications & Experience): <score>/20  
-4. FRU (Financial Resources & Utilization): <score>/30  
-
-==============================
-📌 TOTAL TLR SCORE
-==============================
-<total_score>/100
-
-==============================
-📌 COMPONENT-WISE ANALYSIS
-==============================
-Explain the meaning of each component in simple, short bullet points.
-Use:
-- Current status
-- Weakness
-- Strengths
-- Gap to target score
-
-==============================
-📌 REQUIRED IMPROVEMENTS (NUMBERED)
-==============================
-Provide **numbered** improvement actions like this:
-1. Increase faculty count from X → Y  
-2. Increase PhD faculty percentage from X% → Y%  
-3. Improve financial expenditure per student from X → Y  
-4. Improve seat occupancy to 95%+
-
-Keep them sharp, numeric, and practical.
-
-==============================
-📌 TARGET VALUES TABLE
-==============================
-Return a table like this (text-based):
-
-| Component | Current | Required | Gap |
-|----------|---------|----------|------|
-| Faculty Count | X | Y | +Z |
-| PhD Faculty % | X% | Y% | +Z% |
-| Expenditure per student | ₹X | ₹Y | ₹Z |
-| PhD Students | X | Y | +Z |
-
-==============================
-📌 FINAL SUMMARY (SHORT)
-==============================
-Give a very short 3–4 line actionable summary in simple language.
-
-Make the output visually clean and easy to read in a Tkinter Text widget.
-"""
-    return prompt
-
 def call_gemini(prompt: str) -> str:
     if not gemini_model:
         raise RuntimeError("GEMINI_API_KEY env variable not set.")
@@ -169,33 +92,42 @@ def call_gemini(prompt: str) -> str:
     response = gemini_model.generate_content(prompt)
     return response.text
 
-def handle_submit(entries, output_text):
+def handle_submit(entries, output_text, root):
     try:
         values = collect_input_values(entries)
     except ValueError:
         messagebox.showerror("Input Error", "Please enter valid numeric values.")
         return
-    
+
     prompt = build_prompt(values)
-    
-    output_text.delete("1.0", "end")
-    output_text.insert("1.0", "Contacting Gemini...\nPlease wait...")
-    
-    try:
-        answer = call_gemini(prompt)
-    except Exception as e:
-        output_text.delete("1.0", "end")
-        output_text.insert("1.0", f"Error calling Gemini API: \n{e}")
-        return
-    
-    output_text.delete("1.0", "end")
-    output_text.insert("1.0", answer)
+
+    print(f"{COLOR_INFO}[Gemini] Generated prompt:{COLOR_RESET}\n{prompt}")
+
+    start_spinner(root, output_text)
+
+    def worker():
+        try:
+            answer = call_gemini(prompt)
+            result_text = f"✅ Gemini Response:\n\n{answer}"
+            print(f"{COLOR_OK}[Gemini] Response received successfully.{COLOR_RESET}")
+        except Exception as e:
+            result_text = f"❌ Error calling Gemini API:\n{e}"
+            print(f"{COLOR_ERROR}[Gemini] Error: {e}{COLOR_RESET}")
+
+        def update_ui():
+            stop_spinner()
+            output_text.delete("1.0", "end")
+            output_text.insert("1.0", result_text)
+
+        root.after(0, update_ui)
+
+    threading.Thread(target=worker, daemon=True).start()
 
 def create_submit_button(root, entries, output_text):
     button = ttk.Button(
         root,
         text="Get TLR Recommendation",
-        command=lambda: handle_submit(entries, output_text)
+        command=lambda: handle_submit(entries, output_text, root)
     )
     button.pack(pady=15)
 
