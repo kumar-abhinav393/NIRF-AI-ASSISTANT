@@ -126,6 +126,8 @@ def main():
         calculator_frames["gms"] = gms_frame
         calculator_frames["gphd"] = gphd_frame
         
+        gms_frame.set_gemini_frame(gemini_frame)
+        
         # Rebuild score table with GO headers
         rebuild_score_table(["GPH", "GUI", "GMS", "GPHD"])
     
