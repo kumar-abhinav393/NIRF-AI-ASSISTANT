@@ -61,10 +61,10 @@ class QPCalculatorFrame(ttk.LabelFrame):
         self.output_entry.grid(row=4, column=0, columnspan=3, sticky="ew", padx=2, pady=(0, 15))
         
         self.output_entry.config(state="normal")
-        self.output_entry.insert(0, "PU Score will appear here")
+        self.output_entry.insert(0, "QP Score will appear here")
         self.output_entry.config(state="readonly")
         
-        recommend_btn = ttk.Button(self, text="Get PU Recommendation")
+        recommend_btn = ttk.Button(self, text="Get QP Recommendation")
         recommend_btn.grid(row=4, column=3, columnspan=3, sticky="ew", padx=2, pady=(0, 15))
         
         
