@@ -18,6 +18,7 @@ from ui.GO.gphd_calculator import GPHDCalculatorFrame
 from ui.RP.fppp_calculator import FPPPCalculatorFrame
 from ui.RP.pu_calculator import PUCalculatorFrame
 from ui.RP.qp_calculator import QPCalculatorFrame
+from ui.RP.ipr_calculator import IPRCalculatorFrame
 
 from ui.score_frame_toggle import create_toggle_function, create_score_table_builder
 from ui.geimini_recommendation.gemini_recommendation import GeminiRecommendationFrame
@@ -180,11 +181,15 @@ def main():
         pu_frame.grid(row=0, column=1, padx=5, pady=5, sticky="nsew")
         
         qp_frame = QPCalculatorFrame(content_frame)
-        qp_frame.grid(row=1, column=0, sticky="ew", padx=2, pady=5)
+        qp_frame.grid(row=1, column=0, sticky="nsew", padx=2, pady=5)
+        
+        ipr_frame = IPRCalculatorFrame(content_frame)
+        ipr_frame.grid(row=1, column=1, sticky="nsew", padx=2, pady=5)
         
         calculator_frames["fppp"] = fppp_frame
         calculator_frames["pu"] = pu_frame
         calculator_frames["qp"] = qp_frame
+        calculator_frames["ipr"] = ipr_frame
         
         fppp_frame.set_gemini_frame(gemini_frame)
         
