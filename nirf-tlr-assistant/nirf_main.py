@@ -12,6 +12,7 @@ from ui.GO.gms_calculator import GMSCalculatorFrame
 from ui.GO.gphd_calculator import GPHDCalculatorFrame
 from ui.OI.escs_calculator import ESCSCalculatorFrame
 from ui.RP.fppp_calculator import FPPPCalculatorFrame
+from ui.RP.pu_calculator import PUCalculatorFrame
 from ui.score_frame_toggle import create_toggle_function, create_score_table_builder
 from ui.geimini_recommendation.gemini_recommendation import GeminiRecommendationFrame
 
@@ -169,7 +170,11 @@ def main():
         fppp_frame = FPPPCalculatorFrame(content_frame)
         fppp_frame.grid(row=0, column=0, padx=5, pady=5, sticky="nsew")
         
+        pu_frame = PUCalculatorFrame(content_frame)
+        pu_frame.grid(row=0, column=1, padx=5, pady=5, sticky="nsew")
+        
         calculator_frames["fppp"] = fppp_frame
+        calculator_frames["pu"] = pu_frame
         
         fppp_frame.set_gemini_frame(gemini_frame)
         

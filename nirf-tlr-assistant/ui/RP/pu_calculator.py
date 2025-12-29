@@ -1,0 +1,75 @@
+import tkinter as tk
+from tkinter import ttk, messagebox
+
+class PUCalculatorFrame(ttk.LabelFrame):
+    def __init__(self, parent):
+        super().__init__(parent, text="PU Calculator", padding=10)
+        
+        self.grid_columnconfigure(0, weight=1)
+        self.grid_columnconfigure(1, weight=1)
+        self.grid_columnconfigure(2, weight=1)
+        self.grid_columnconfigure(3, weight=1)
+        self.grid_columnconfigure(4, weight=1)
+        self.grid_columnconfigure(5, weight=1)
+        self.grid_columnconfigure(6, weight=1)
+        
+        style = ttk.Style()
+        style.configure("Docs.TButton", 
+                       background="#4A90E2", 
+                       foreground="#FFFFFF",
+                       font=("Arial", 10, "bold"),
+                       padding=5)
+        
+        btn_docs = ttk.Button(self, text="📘 PU Docs", style="Docs.TButton")
+        btn_docs.grid(row=0, column=0, columnspan=6, sticky="ew")
+        
+        # Row 1: Total Fac, Total Stu, Total Weighted Pubs
+        ttk.Label(self, text="Total Fac:").grid(row=1, column=0, sticky="w", padx=2, pady=5)
+        self.tot_fac = ttk.Entry(self, width=10)
+        self.tot_fac.grid(row=1, column=1, pady=5, sticky="ew", padx=2)
+        
+        ttk.Label(self, text="Total Stu(UG+PG):").grid(row=1, column=2, sticky="w", padx=2, pady=5)
+        self.tot_stu = ttk.Entry(self, width=10)
+        self.tot_stu.grid(row=1, column=3, pady=5, sticky="ew", padx=2)
+        
+        ttk.Label(self, text="Total WPubs:").grid(row=1, column=4, sticky="w", padx=2, pady=5)
+        self.tot_wpubs = ttk.Entry(self, width=10)
+        self.tot_wpubs.grid(row=1, column=5, pady=5, sticky="ew", padx=2)
+        
+        # Row 2: Total Retracted Pubs, Pubs (Year 1), Pubs (Year 2)
+        ttk.Label(self, text="Total RPubs:").grid(row=2, column=0, sticky="w", padx=2, pady=5)
+        self.tot_rpubs = ttk.Entry(self, width=10)
+        self.tot_rpubs.grid(row=2, column=1, sticky="ew", padx=2, pady=5) 
+        
+        ttk.Label(self, text="Pubs(Year 1):").grid(row=2, column=2, sticky="w", padx=2, pady=5)
+        self.pubs_year1 = ttk.Entry(self, width=10)
+        self.pubs_year1.grid(row=2, column=3, sticky="ew", padx=2, pady=5)
+        
+        ttk.Label(self, text="Pubs(Year 2):").grid(row=2, column=4, sticky="w", padx=2, pady=5)
+        self.pubs_year2 = ttk.Entry(self, width=10)
+        self.pubs_year2.grid(row=2, column=5, sticky="ew", padx=2, pady=5)
+        
+        # Row 3: Pubs (Year 3)
+        ttk.Label(self, text="Pubs(Year 3):").grid(row=3, column=0, sticky="w", padx=2, pady=5)
+        self.pubs_year3 = ttk.Entry(self, width=10)
+        self.pubs_year3.grid(row=3, column=1, sticky="ew", padx=2, pady=5)
+        
+        # Row 4: Buttons
+        predict_btn = ttk.Button(self, text="Predict PU")
+        clear_btn = ttk.Button(self, text="Clear")
+        
+        clear_btn.grid(row=4, column=0, columnspan=3, sticky="ew", padx=2, pady=5)
+        predict_btn.grid(row=4, column=3, columnspan=3, sticky="ew", padx=2, pady=5)
+        
+        # Row 5: Output and recommendation
+        self.output_entry = ttk.Entry(self, width=15, font=("Ariel", 12, "bold"), state="readonly", foreground="gray")
+        self.output_entry.grid(row=5, column=0, columnspan=3, sticky="ew", padx=2, pady=(0, 15))
+        
+        self.output_entry.config(state="normal")
+        self.output_entry.insert(0, "PU Score will appear here")
+        self.output_entry.config(state="readonly")
+        
+        recommend_btn = ttk.Button(self, text="Get PU Recommendation")
+        recommend_btn.grid(row=5, column=3, columnspan=3, sticky="ew", padx=2, pady=(0, 15))
+        
+        
