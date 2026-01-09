@@ -20,7 +20,7 @@ _imputer = None
 # ---------------------------------------------------
 # 1. LOAD YOUR EXCEL DATA
 # ---------------------------------------------------
-df = pd.read_excel("data/MasterData_ESCS.xlsx", engine="openpyxl")
+df = pd.read_excel("data/Engineering/MasterData_ESCS.xlsx", engine="openpyxl")
 
 # ---------------------------------------------------
 # 2. REPLACE NaN WITH 0 OR MEAN

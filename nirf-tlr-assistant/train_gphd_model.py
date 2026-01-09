@@ -8,7 +8,7 @@ from sklearn.metrics import r2_score, mean_squared_error
 # ----------------------------------------
 # 1. Load dataset
 # ----------------------------------------
-df = pd.read_excel("data/MasterData_GPHD.xlsx")
+df = pd.read_excel("data/Engineering/MasterData_GPHD.xlsx")
 
 # ----------------------------------------
 # 2. Feature Engineering

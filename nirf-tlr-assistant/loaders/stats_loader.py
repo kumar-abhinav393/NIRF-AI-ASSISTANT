@@ -1,7 +1,7 @@
 import pandas as pd
 
 def load_medians():
-    df = pd.read_excel("data/MasterData_SS.xlsx")
+    df = pd.read_excel("data/Engineering/MasterData_SS.xlsx")
     return {
         "median_NT": df["TOTAL_SANCTIONED (Incl UG + PG)"].median(),
         "median_NE": df["TOTAL_ENROLLED"].median(),
@@ -10,7 +10,7 @@ def load_medians():
     }
 
 def load_fsr_medians():
-    df = pd.read_excel("data/MasterData_FSR.xlsx")
+    df = pd.read_excel("data/Engineering/MasterData_FSR.xlsx")
 
     return {
         "median_F": df["Full_Time_Reg_Faculty"].median(),
@@ -19,7 +19,7 @@ def load_fsr_medians():
     }
 
 def load_fru_medians():
-    df = pd.read_csv("data/FRU_feature_engineered.csv")
+    df = pd.read_csv("data/Engineering/FRU_feature_engineered.csv")
     return {
         # Core FRU medians
         "median_BC": df["BC"].median(),

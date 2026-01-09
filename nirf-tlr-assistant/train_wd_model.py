@@ -7,7 +7,7 @@ from sklearn.metrics import r2_score, mean_absolute_error
 # -------------------------------------------------------
 # 1. Load Excel
 # -------------------------------------------------------
-df = pd.read_excel("data/MasterData_WD.xlsx")
+df = pd.read_excel("data/Engineering/MasterData_WD.xlsx")
 
 # -------------------------------------------------------
 # 2. Feature Engineering

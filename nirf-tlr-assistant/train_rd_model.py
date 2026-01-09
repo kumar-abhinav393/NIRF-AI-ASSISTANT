@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler
 # ---------------------------------------------
 # LOAD DATA
 # ---------------------------------------------
-df = pd.read_excel("data/MasterData_RD.xlsx")
+df = pd.read_excel("data/Engineering/MasterData_RD.xlsx")
 df.columns = df.columns.str.strip()
 
 # ---------------------------------------------

@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score, mean_squared_error
 
 # Load dataset
-df = pd.read_excel("data/MasterData_GPH.xlsx")
+df = pd.read_excel("data/Engineering/MasterData_GPH.xlsx")
 
 X = df[["Np", "Nhs"]]
 y = df["GPH"]
