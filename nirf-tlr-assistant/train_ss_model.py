@@ -87,6 +87,6 @@ def train_ss_model(input_path: str, model_output_path: str):
 
 if __name__ == "__main__":
     train_ss_model(
-        input_path="data/ss_feature_engineered.csv",
+        input_path="data/Engineering/FRU_feature_engineered.csv",
         model_output_path="model/ss_model.pkl"
     )

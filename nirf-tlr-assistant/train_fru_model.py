@@ -82,6 +82,6 @@ def train_fru_model(input_path: str, model_output_path: str):
 
 if __name__ == "__main__":
     train_fru_model(
-        input_path="data/FRU_feature_engineered.csv",
+        input_path="data/Engineering/FRU_feature_engineered.csv",
         model_output_path="model/fru_model.pkl"
     )

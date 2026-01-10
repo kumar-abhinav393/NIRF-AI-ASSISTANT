@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.metrics import mean_absolute_error, r2_score
 
-DEFAULT_EXCEL_PATH = "data/MasterData_FPPP.xlsx"
+DEFAULT_EXCEL_PATH = "data/Engineering/MasterData_FPPP.xlsx"
 MODEL_OUT_PATH = "model/fppp_model.pkl"
 META_OUT_PATH = "model/fppp_model_meta.pkl"
 RANDOM_STATE = 42

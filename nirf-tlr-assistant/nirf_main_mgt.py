@@ -25,7 +25,7 @@ from ui.geimini_recommendation.gemini_recommendation import GeminiRecommendation
 
 def main():
     root = tk.Tk()
-    root.title("NIRF TLR Assistant")
+    root.title("NIRF TLR Assistant (for Management)")
     root.geometry("1200x1000")
     
     calculator_frames = {}

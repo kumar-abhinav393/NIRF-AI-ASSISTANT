@@ -7,7 +7,7 @@ from sklearn.metrics import r2_score, mean_absolute_error
 # =====================================
 # LOAD EXCEL DATA
 # =====================================
-df = pd.read_excel("data/MasterData_GUE.xlsx")
+df = pd.read_excel("data/Engineering/MasterData_GUE.xlsx")
 
 # =====================================
 # COMPUTE Ng (OFFICIAL NIRF DEFINITION)
