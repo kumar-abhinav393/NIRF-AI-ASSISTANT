@@ -32,41 +32,41 @@ class FRUCalculatorFrame(ttk.LabelFrame):
         btn_docs.grid(row=0, column=0, columnspan=6, sticky="ew")
         
         # Row 1: TS1, TS2, TS3 in same row
-        ttk.Label(self, text="TS1(23-24):").grid(row=1, column=0, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="TS1(24-25):").grid(row=1, column=0, sticky="w", pady=5, padx=2)
         self.ts1_entry = ttk.Entry(self, width=10)
         self.ts1_entry.grid(row=1, column=1, pady=5, sticky="ew", padx=2)
         
-        ttk.Label(self, text="TS2(22-23):").grid(row=1, column=2, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="TS2(23-24):").grid(row=1, column=2, sticky="w", pady=5, padx=2)
         self.ts2_entry = ttk.Entry(self, width=10)
         self.ts2_entry.grid(row=1, column=3, pady=5, sticky="ew", padx=2)
         
-        ttk.Label(self, text="TS3(21-22):").grid(row=1, column=4, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="TS3(22-23):").grid(row=1, column=4, sticky="w", pady=5, padx=2)
         self.ts3_entry = ttk.Entry(self, width=10)
         self.ts3_entry.grid(row=1, column=5, pady=5, sticky="ew", padx=2)
         
         # Row 2: CE1, CE2, CE3 in same row
-        ttk.Label(self, text="CE1(23-24):").grid(row=2, column=0, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="CE1(24-25):").grid(row=2, column=0, sticky="w", pady=5, padx=2)
         self.ce1_total_entry = ttk.Entry(self, width=10)
         self.ce1_total_entry.grid(row=2, column=1, pady=5, sticky="ew", padx=2)
         
-        ttk.Label(self, text="CE2(22-23):").grid(row=2, column=2, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="CE2(23-24):").grid(row=2, column=2, sticky="w", pady=5, padx=2)
         self.ce2_total_entry = ttk.Entry(self, width=10)
         self.ce2_total_entry.grid(row=2, column=3, pady=5, sticky="ew", padx=2)
         
-        ttk.Label(self, text="CE3(21-22):").grid(row=2, column=4, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="CE3(22-23):").grid(row=2, column=4, sticky="w", pady=5, padx=2)
         self.ce3_total_entry = ttk.Entry(self, width=10)
         self.ce3_total_entry.grid(row=2, column=5, pady=5, sticky="ew", padx=2)
         
         # Row 3: OE1, OE2, OE3 in same row
-        ttk.Label(self, text="OE1(23-24):").grid(row=3, column=0, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="OE1(24-25):").grid(row=3, column=0, sticky="w", pady=5, padx=2)
         self.oe1_total_entry = ttk.Entry(self, width=10)
         self.oe1_total_entry.grid(row=3, column=1, pady=5, sticky="ew", padx=2)
         
-        ttk.Label(self, text="OE2(22-23):").grid(row=3, column=2, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="OE2(23-24):").grid(row=3, column=2, sticky="w", pady=5, padx=2)
         self.oe2_total_entry = ttk.Entry(self, width=10)
         self.oe2_total_entry.grid(row=3, column=3, pady=5, sticky="ew", padx=2)
         
-        ttk.Label(self, text="OE3(21-22):").grid(row=3, column=4, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="OE3(22-23):").grid(row=3, column=4, sticky="w", pady=5, padx=2)
         self.oe3_total_entry = ttk.Entry(self, width=10)
         self.oe3_total_entry.grid(row=3, column=5, pady=5, sticky="ew", padx=2)
         

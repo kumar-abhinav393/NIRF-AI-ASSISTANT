@@ -29,63 +29,63 @@ class GMSCalculatorFrame(ttk.LabelFrame):
         btn_docs = ttk.Button(self, text="📘 GMS Docs", style="Docs.TButton")
         btn_docs.grid(row=0, column=0, columnspan=6, sticky="ew")
     
-        ttk.Label(self, text="UG4-MS(21-22): ").grid(row=1, column=0, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="UG4-MS(22-23): ").grid(row=1, column=0, sticky="w", pady=5, padx=2)
         self.ug4_ms_21_total_entry = ttk.Entry(self, width=10)
         self.ug4_ms_21_total_entry.grid(row=1, column=1, pady=5, sticky="ew", padx=2)
         
-        ttk.Label(self, text="UG4-MS(22-23): ").grid(row=1, column=2, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="UG4-MS(23-24): ").grid(row=1, column=2, sticky="w", pady=5, padx=2)
         self.ug4_ms_22_total_entry = ttk.Entry(self, width=10)
         self.ug4_ms_22_total_entry.grid(row=1, column=3, pady=5, sticky="ew", padx=2)
         
-        ttk.Label(self, text="UG4-MS(23-24): ").grid(row=1, column=4, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="UG4-MS(24-25): ").grid(row=1, column=4, sticky="w", pady=5, padx=2)
         self.ug4_ms_23_total_entry = ttk.Entry(self, width=10)
         self.ug4_ms_23_total_entry.grid(row=1, column=5, pady=5, sticky="ew", padx=2)
         
-        ttk.Label(self, text="UG5-MS(21-22): ").grid(row=2, column=0, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="UG5-MS(22-23): ").grid(row=2, column=0, sticky="w", pady=5, padx=2)
         self.ug5_ms_21_total_entry = ttk.Entry(self, width=10)
         self.ug5_ms_21_total_entry.grid(row=2, column=1, pady=5, sticky="ew", padx=2)
         
-        ttk.Label(self, text="UG5-MS(22-23): ").grid(row=2, column=2, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="UG5-MS(23-24): ").grid(row=2, column=2, sticky="w", pady=5, padx=2)
         self.ug5_ms_22_total_entry = ttk.Entry(self, width=10)
         self.ug5_ms_22_total_entry.grid(row=2, column=3, pady=5, sticky="ew", padx=2)
         
-        ttk.Label(self, text="UG5-MS(23-24): ").grid(row=2, column=4, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="UG5-MS(24-25): ").grid(row=2, column=4, sticky="w", pady=5, padx=2)
         self.ug5_ms_23_total_entry = ttk.Entry(self, width=10)
         self.ug5_ms_23_total_entry.grid(row=2, column=5, pady=5, sticky="ew", padx=2)
         
-        ttk.Label(self, text="PG2-MS(21-22): ").grid(row=3, column=0, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="PG2-MS(22-23): ").grid(row=3, column=0, sticky="w", pady=5, padx=2)
         self.pg2_ms_21_total_entry = ttk.Entry(self, width=10)
         self.pg2_ms_21_total_entry.grid(row=3, column=1, pady=5, sticky="ew", padx=2)
         
-        ttk.Label(self, text="PG2-MS(22-23): ").grid(row=3, column=2, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="PG2-MS(23-24): ").grid(row=3, column=2, sticky="w", pady=5, padx=2)
         self.pg2_ms_22_total_entry = ttk.Entry(self, width=10)
         self.pg2_ms_22_total_entry.grid(row=3, column=3, pady=5, sticky="ew", padx=2)
         
-        ttk.Label(self, text="PG2-MS(23-24): ").grid(row=3, column=4, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="PG2-MS(24-25): ").grid(row=3, column=4, sticky="w", pady=5, padx=2)
         self.pg2_ms_23_total_entry = ttk.Entry(self, width=10)
         self.pg2_ms_23_total_entry.grid(row=3, column=5, pady=5, sticky="ew", padx=2)
         
-        ttk.Label(self, text="PG3-MS(21-22): ").grid(row=4, column=0, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="PG3-MS(22-23): ").grid(row=4, column=0, sticky="w", pady=5, padx=2)
         self.pg3_ms_21_total_entry = ttk.Entry(self, width=10)
         self.pg3_ms_21_total_entry.grid(row=4, column=1, pady=5, sticky="ew", padx=2)
         
-        ttk.Label(self, text="PG3-MS(22-23): ").grid(row=4, column=2, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="PG3-MS(23-24): ").grid(row=4, column=2, sticky="w", pady=5, padx=2)
         self.pg3_ms_22_total_entry = ttk.Entry(self, width=10)
         self.pg3_ms_22_total_entry.grid(row=4, column=3, pady=5, sticky="ew", padx=2)
         
-        ttk.Label(self, text="PG3-MS(23-24): ").grid(row=4, column=4, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="PG3-MS(24-25): ").grid(row=4, column=4, sticky="w", pady=5, padx=2)
         self.pg3_ms_23_total_entry = ttk.Entry(self, width=10)
         self.pg3_ms_23_total_entry.grid(row=4, column=5, pady=5, sticky="ew", padx=2)
         
-        ttk.Label(self, text="PG5-MS(21-22): ").grid(row=5, column=0, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="PG5-MS(22-23): ").grid(row=5, column=0, sticky="w", pady=5, padx=2)
         self.pg5_ms_21_total_entry = ttk.Entry(self, width=10)
         self.pg5_ms_21_total_entry.grid(row=5, column=1, pady=5, sticky="ew", padx=2)
         
-        ttk.Label(self, text="PG5-MS(22-23): ").grid(row=5, column=2, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="PG5-MS(23-24): ").grid(row=5, column=2, sticky="w", pady=5, padx=2)
         self.pg5_ms_22_total_entry = ttk.Entry(self, width=10)
         self.pg5_ms_22_total_entry.grid(row=5, column=3, pady=5, sticky="ew", padx=2)
         
-        ttk.Label(self, text="PG5-MS(23-24): ").grid(row=5, column=4, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="PG5-MS(24-25): ").grid(row=5, column=4, sticky="w", pady=5, padx=2)
         self.pg5_ms_23_total_entry = ttk.Entry(self, width=10)
         self.pg5_ms_23_total_entry.grid(row=5, column=5, pady=5, sticky="ew", padx=2)
         

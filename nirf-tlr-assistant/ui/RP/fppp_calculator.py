@@ -34,29 +34,29 @@ class FPPPCalculatorFrame(ttk.LabelFrame):
         self.tot_fac = ttk.Entry(self, width=10)
         self.tot_fac.grid(row=1, column=1, pady=5, sticky="ew", padx=2)
         
-        ttk.Label(self, text="SAmt_24-23:").grid(row=1, column=2, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="SAmt_24-25:").grid(row=1, column=2, sticky="w", pady=5, padx=2)
         self.spon_amt_24_23 = ttk.Entry(self, width=10)
         self.spon_amt_24_23.grid(row=1, column=3, sticky="ew", padx=2, pady=5)
         
-        ttk.Label(self, text="SAmt_23-22:").grid(row=1, column=4, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="SAmt_23-24:").grid(row=1, column=4, sticky="w", pady=5, padx=2)
         self.spon_amt_23_22 = ttk.Entry(self, width=10)
         self.spon_amt_23_22.grid(row=1, column=5, sticky="ew", padx=2, pady=5)
         
         # Row 2: SAmt_22-21, CAmt_24-23, CAmt_23-22
-        ttk.Label(self, text="SAmt_22-21:").grid(row=2, column=0, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="SAmt_22-23:").grid(row=2, column=0, sticky="w", pady=5, padx=2)
         self.spon_amt_22_21 = ttk.Entry(self, width=10)
         self.spon_amt_22_21.grid(row=2, column=1, sticky="ew", padx=2, pady=5)
         
-        ttk.Label(self, text="CAmt_24-23:").grid(row=2, column=2, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="CAmt_24-25:").grid(row=2, column=2, sticky="w", pady=5, padx=2)
         self.consul_amt_24_23 = ttk.Entry(self, width=10)
         self.consul_amt_24_23.grid(row=2, column=3, pady=5, sticky="ew", padx=2)
         
-        ttk.Label(self, text="CAmt_23-22:").grid(row=2, column=4, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="CAmt_23-24:").grid(row=2, column=4, sticky="w", pady=5, padx=2)
         self.consul_amt_23_22 = ttk.Entry(self, width=10)
         self.consul_amt_23_22.grid(row=2, column=5, pady=5, sticky="ew", padx=2)
         
         # Row 3: CAmt_22-21
-        ttk.Label(self, text="CAmt_22-21:").grid(row=3, column=0, sticky="w", pady=5, padx=2)
+        ttk.Label(self, text="CAmt_22-23:").grid(row=3, column=0, sticky="w", pady=5, padx=2)
         self.consul_amt_22_21 = ttk.Entry(self, width=10)
         self.consul_amt_22_21.grid(row=3, column=1, pady=5, sticky="ew", padx=2)
         

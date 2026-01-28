@@ -25,102 +25,102 @@ class GUICalculatorFrame(ttk.LabelFrame):
         btn_docs.grid(row=0, column=0, columnspan=12, sticky="ew")
         
         # Row 1: All 6 fields alternating Intake and Graduated (UG4)
-        ttk.Label(self, text="IN-18:").grid(row=1, column=0, sticky="e", pady=5, padx=(2,1))
+        ttk.Label(self, text="IN(19-20):").grid(row=1, column=0, sticky="e", pady=5, padx=(2,1))
         self.total_ug4_intake1 = ttk.Entry(self, width=4)
         self.total_ug4_intake1.grid(row=1, column=1, pady=5, sticky="ew", padx=(1,2))
         
-        ttk.Label(self, text="GRAD-22:").grid(row=1, column=2, sticky="e", pady=5, padx=(2,1))
+        ttk.Label(self, text="GRAD(22-23):").grid(row=1, column=2, sticky="e", pady=5, padx=(2,1))
         self.total_ug4_passed1 = ttk.Entry(self, width=4)
         self.total_ug4_passed1.grid(row=1, column=3, pady=5, sticky="ew", padx=(1,2))
         
-        ttk.Label(self, text="IN-19:").grid(row=1, column=4, sticky="e", pady=5, padx=(2,1))
+        ttk.Label(self, text="IN(20-21):").grid(row=1, column=4, sticky="e", pady=5, padx=(2,1))
         self.total_ug4_intake2 = ttk.Entry(self, width=4)
         self.total_ug4_intake2.grid(row=1, column=5, pady=5, sticky="ew", padx=(1,2))
         
-        ttk.Label(self, text="GRAD-23:").grid(row=1, column=6, sticky="e", pady=5, padx=(2,1))
+        ttk.Label(self, text="GRAD(23-24):").grid(row=1, column=6, sticky="e", pady=5, padx=(2,1))
         self.total_ug4_passed2 = ttk.Entry(self, width=4)
         self.total_ug4_passed2.grid(row=1, column=7, pady=5, sticky="ew", padx=(1,2))
         
-        ttk.Label(self, text="IN-20:").grid(row=1, column=8, sticky="e", pady=5, padx=(2,1))
+        ttk.Label(self, text="IN(21-22):").grid(row=1, column=8, sticky="e", pady=5, padx=(2,1))
         self.total_ug4_intake3 = ttk.Entry(self, width=4)
         self.total_ug4_intake3.grid(row=1, column=9, pady=5, sticky="ew", padx=(1,2))
         
-        ttk.Label(self, text="GRAD-24:").grid(row=1, column=10, sticky="e", pady=5, padx=(2,1))
+        ttk.Label(self, text="GRAD(24-25):").grid(row=1, column=10, sticky="e", pady=5, padx=(2,1))
         self.total_ug4_passed3 = ttk.Entry(self, width=4)
         self.total_ug4_passed3.grid(row=1, column=11, pady=5, sticky="ew", padx=(1,2))
         
         # Row 2: All 6 fields alternating Intake and Graduated (UG5)
-        ttk.Label(self, text="IN-17:").grid(row=2, column=0, sticky="e", pady=5, padx=(2,1))
+        ttk.Label(self, text="IN(18-19):").grid(row=2, column=0, sticky="e", pady=5, padx=(2,1))
         self.total_ug5_intake1 = ttk.Entry(self, width=4)
         self.total_ug5_intake1.grid(row=2, column=1, pady=5, sticky="ew", padx=(1,2))
         
-        ttk.Label(self, text="GRAD-22:").grid(row=2, column=2, sticky="e", pady=5, padx=(2,1))
+        ttk.Label(self, text="GRAD(22-23):").grid(row=2, column=2, sticky="e", pady=5, padx=(2,1))
         self.total_ug5_passed1 = ttk.Entry(self, width=4)
         self.total_ug5_passed1.grid(row=2, column=3, pady=5, sticky="ew", padx=(1,2))
         
-        ttk.Label(self, text="IN-18:").grid(row=2, column=4, sticky="e", pady=5, padx=(2,1))
+        ttk.Label(self, text="IN(19-20):").grid(row=2, column=4, sticky="e", pady=5, padx=(2,1))
         self.total_ug5_intake2 = ttk.Entry(self, width=4)
         self.total_ug5_intake2.grid(row=2, column=5, pady=5, sticky="ew", padx=(1,2))
         
-        ttk.Label(self, text="GRAD-23:").grid(row=2, column=6, sticky="e", pady=5, padx=(2,1))
+        ttk.Label(self, text="GRAD(23-24):").grid(row=2, column=6, sticky="e", pady=5, padx=(2,1))
         self.total_ug5_passed2 = ttk.Entry(self, width=4)
         self.total_ug5_passed2.grid(row=2, column=7, pady=5, sticky="ew", padx=(1,2))
         
-        ttk.Label(self, text="IN-19:").grid(row=2, column=8, sticky="e", pady=5, padx=(2,1))
+        ttk.Label(self, text="IN(20-21):").grid(row=2, column=8, sticky="e", pady=5, padx=(2,1))
         self.total_ug5_intake3 = ttk.Entry(self, width=4)
         self.total_ug5_intake3.grid(row=2, column=9, pady=5, sticky="ew", padx=(1,2))
         
-        ttk.Label(self, text="GRAD-24:").grid(row=2, column=10, sticky="e", pady=5, padx=(2,1))
+        ttk.Label(self, text="GRAD(24-25):").grid(row=2, column=10, sticky="e", pady=5, padx=(2,1))
         self.total_ug5_passed3 = ttk.Entry(self, width=4)
         self.total_ug5_passed3.grid(row=2, column=11, pady=5, sticky="ew", padx=(1,2))
         
         # Row 3: All 6 fields alternating Intake and Graduated (PG-2)
-        ttk.Label(self, text="IN-20:").grid(row=3, column=0, sticky="e", pady=5, padx=(2,1))
+        ttk.Label(self, text="IN(21-22):").grid(row=3, column=0, sticky="e", pady=5, padx=(2,1))
         self.total_pg2_intake1 = ttk.Entry(self, width=4)
         self.total_pg2_intake1.grid(row=3, column=1, pady=5, sticky="ew", padx=(1,2))
         
-        ttk.Label(self, text="GRAD-22:").grid(row=3, column=2, sticky="e", pady=5, padx=(2,1))
+        ttk.Label(self, text="GRAD(22-23):").grid(row=3, column=2, sticky="e", pady=5, padx=(2,1))
         self.total_pg2_passed1 = ttk.Entry(self, width=4)
         self.total_pg2_passed1.grid(row=3, column=3, pady=5, sticky="ew", padx=(1,2))
         
-        ttk.Label(self, text="IN-21:").grid(row=3, column=4, sticky="e", pady=5, padx=(2,1))
+        ttk.Label(self, text="IN(22-23):").grid(row=3, column=4, sticky="e", pady=5, padx=(2,1))
         self.total_pg2_intake2 = ttk.Entry(self, width=4)
         self.total_pg2_intake2.grid(row=3, column=5, pady=5, sticky="ew", padx=(1,2))
         
-        ttk.Label(self, text="GRAD-23:").grid(row=3, column=6, sticky="e", pady=5, padx=(2,1))
+        ttk.Label(self, text="GRAD(23-24):").grid(row=3, column=6, sticky="e", pady=5, padx=(2,1))
         self.total_pg2_passed2 = ttk.Entry(self, width=4)
         self.total_pg2_passed2.grid(row=3, column=7, pady=5, sticky="ew", padx=(1,2))
         
-        ttk.Label(self, text="IN-22:").grid(row=3, column=8, sticky="e", pady=5, padx=(2,1))
+        ttk.Label(self, text="IN(23-24):").grid(row=3, column=8, sticky="e", pady=5, padx=(2,1))
         self.total_pg2_intake3 = ttk.Entry(self, width=4)
         self.total_pg2_intake3.grid(row=3, column=9, pady=5, sticky="ew", padx=(1,2))
         
-        ttk.Label(self, text="GRAD-24:").grid(row=3, column=10, sticky="e", pady=5, padx=(2,1))
+        ttk.Label(self, text="GRAD(24-25):").grid(row=3, column=10, sticky="e", pady=5, padx=(2,1))
         self.total_pg2_passed3 = ttk.Entry(self, width=4)
         self.total_pg2_passed3.grid(row=3, column=11, pady=5, sticky="ew", padx=(1,2))
         
         # Row 1: All 6 fields alternating Intake and Graduated (PG-3)
-        ttk.Label(self, text="IN-19:").grid(row=4, column=0, sticky="e", pady=5, padx=(2,1))
+        ttk.Label(self, text="IN(20-21):").grid(row=4, column=0, sticky="e", pady=5, padx=(2,1))
         self.total_pg3_intake1 = ttk.Entry(self, width=4)
         self.total_pg3_intake1.grid(row=4, column=1, pady=5, sticky="ew", padx=(1,2))
         
-        ttk.Label(self, text="GRAD-22:").grid(row=4, column=2, sticky="e", pady=5, padx=(2,1))
+        ttk.Label(self, text="GRAD(22-23):").grid(row=4, column=2, sticky="e", pady=5, padx=(2,1))
         self.total_pg3_passed1 = ttk.Entry(self, width=4)
         self.total_pg3_passed1.grid(row=4, column=3, pady=5, sticky="ew", padx=(1,2))
         
-        ttk.Label(self, text="IN-20:").grid(row=4, column=4, sticky="e", pady=5, padx=(2,1))
+        ttk.Label(self, text="IN(21-22):").grid(row=4, column=4, sticky="e", pady=5, padx=(2,1))
         self.total_pg3_intake2 = ttk.Entry(self, width=4)
         self.total_pg3_intake2.grid(row=4, column=5, pady=5, sticky="ew", padx=(1,2))
         
-        ttk.Label(self, text="GRAD-23:").grid(row=4, column=6, sticky="e", pady=5, padx=(2,1))
+        ttk.Label(self, text="GRAD(23-24):").grid(row=4, column=6, sticky="e", pady=5, padx=(2,1))
         self.total_pg3_passed2 = ttk.Entry(self, width=4)
         self.total_pg3_passed2.grid(row=4, column=7, pady=5, sticky="ew", padx=(1,2))
         
-        ttk.Label(self, text="IN-21:").grid(row=4, column=8, sticky="e", pady=5, padx=(2,1))
+        ttk.Label(self, text="IN(22-23):").grid(row=4, column=8, sticky="e", pady=5, padx=(2,1))
         self.total_pg3_intake3 = ttk.Entry(self, width=4)
         self.total_pg3_intake3.grid(row=4, column=9, pady=5, sticky="ew", padx=(1,2))
         
-        ttk.Label(self, text="GRAD-24:").grid(row=4, column=10, sticky="e", pady=5, padx=(2,1))
+        ttk.Label(self, text="GRAD(24-25):").grid(row=4, column=10, sticky="e", pady=5, padx=(2,1))
         self.total_pg3_passed3 = ttk.Entry(self, width=4)
         self.total_pg3_passed3.grid(row=4, column=11, pady=5, sticky="ew", padx=(1,2))
         
