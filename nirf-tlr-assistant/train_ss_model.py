@@ -2,6 +2,7 @@ import joblib
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import GradientBoostingRegressor
+
 from sklearn.metrics import mean_absolute_error, r2_score
 
 def train_ss_model(input_path: str, model_output_path: str):
@@ -87,6 +88,6 @@ def train_ss_model(input_path: str, model_output_path: str):
 
 if __name__ == "__main__":
     train_ss_model(
-        input_path="data/Engineering/FRU_feature_engineered.csv",
+        input_path="data/Engineering/ss_feature_engineered.csv",
         model_output_path="model/ss_model.pkl"
     )
